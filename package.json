@@ -1,0 +1,35 @@
+{
+  "name": "npm-authify",
+  "version": "0.0.0",
+  "description": "Support library for managing auth-related npm bits.",
+  "main": "index.js",
+  "files": [
+    "*.js",
+    "lib"
+  ],
+  "scripts": {
+    "preversion": "npm t",
+    "postversion": "npm publish && git push --follow-tags",
+    "pretest": "standard lib test *.js",
+    "test": "nyc -- tap -j8 test/*.js"
+  },
+  "repository": "https://github.com/npm/npm-authify",
+  "keywords": [
+    "npm",
+    "auth",
+    "authentication",
+    "login",
+    "cookies"
+  ],
+  "author": "Kat Marchán <kzm@sykosomatic.org>",
+  "license": "CC0-1.0",
+  "dependencies": {},
+  "devDependencies": {
+    "mkdirp": "^0.5.1",
+    "nock": "^9.0.3",
+    "nyc": "^10.0.0",
+    "rimraf": "^2.5.4",
+    "standard": "^8.6.0",
+    "tap": "^10.0.2"
+  }
+}
